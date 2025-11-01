@@ -1,25 +1,21 @@
-<!-- Add permissions -->
-<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-<uses-permission android:name="android.permission.ACCESSIBILITY_SERVICE" />
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tripworth.app">
 
-<application ...>
-    <service
-        android:name=".services.RideCaptureService"
-        android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
-        <intent-filter>
-            <action android:name="android.accessibilityservice.AccessibilityService" />
-        </intent-filter>
-        <meta-data
-            android:name="android.accessibilityservice"
-            android:resource="@xml/accessibility_service_config" />
-    </service>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <service android:name=".services.OverlayService" />
+    <application
+        android:allowBackup="true"
+        android:label="TripWorth"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
-    <activity android:name=".MainActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-</application>
+</manifest>
