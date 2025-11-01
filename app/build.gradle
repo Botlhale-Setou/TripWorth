@@ -5,6 +5,7 @@ plugins {
 }
 
 android {
+    namespace "com.tripworth.app"
     compileSdk 33
     defaultConfig {
         applicationId "com.example.tripworth"
