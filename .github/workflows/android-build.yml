@@ -30,8 +30,8 @@ jobs:
         run: chmod +x ./gradlew
 
       # 5️⃣ Build the debug APK
-      - name: Build Debug APK
-        run: ./gradlew assembleDebug
+      - name: Build Debug APK (with full logs)
+        run: ./gradlew assembleDebug --stacktrace --info
 
       # 6️⃣ Upload APK artifact
       - name: Upload APK Artifact
